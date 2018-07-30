@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0001, user-scalable=no">
+    <meta name="theme-color" content="#CADAE0">
+<!--
+    <style>
+      * { margin: 0; padding: 0; }
+      .loader-area { display: table; position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0 auto; background: #e6ecef; z-index: 9999; }
+      .loader { display: table-cell; height: 100%; vertical-align: middle; }
+      .scmp-logo { position: relative; width: 200px; height: 140px; margin: 0 auto; background: url('../../logos/scmp-new.svg') 0 100% no-repeat; background-size: 200px; z-index: 3; }
+      .finger { position: absolute; bottom:-22px; left: 16px; width: 35px; height: 50px; background: url('../../logos/finger-new.svg') 0 100% no-repeat; background-size: 35px; z-index: 2; animation: finger 1.5s infinite; transform-origin: 0 0; }
+      .circle { position: absolute; display: block; bottom: 12px; left: 14px; width: 20px; height: 20px; border: 2px solid #011b55; border-radius: 50%; z-index: 1; transform: scale(1); animation: enlarge 1.5s infinite; box-sizing: border-box;  }
+      @keyframes enlarge { 0% { transform: scale(1) } 50% { transform: scale(1.5) } 100% { transform: scale(1) } }
+      @keyframes finger { 0% { transform: scale(1);  } 50% { transform: scale(1.1); } 100% { transform: scale(1);  } }
+    </style>
+-->
+    <link rel="shortcut icon" href="https://www.scmp.com/sites/all/themes/boom/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://multimedia.scmp.com/widgets/tech/facial-recognition/css/face.css">
+  <body>
+    <div id="container" class="container frame-0">
+      <header id="header" class="header"><div class="h-title">How facial recognition works</div></header>
+      <div id="controls" class="controls"><div id="control-prev" class="control prev-button ion ion-chevron-up"></div><div id="control-next" class="control next-button ion ion-chevron-down"></div><div id="control-reload" class="control control-inactive reload-button ion ion-android-refresh"></div></div>
+      <article id="main" class="main ">
+        <div id="svg" class="svgs ">
+          <div id="svg-2" class="svg-2 svg-container"></div>
+          <div id="svg-1" class="svg-1 svg-container"></div>
+          <div id="svg-3" class="svg-3 svg-container"></div>
+        </div>
+        <div class="frame-items" >
+          <div class="frame-item frame-item-0 active">
+            
+          </div>
+          <div class="frame-item frame-item-1 ">
+            
+            <div class="measurements">
+              <div class="measurement measurement-1">Distance between the eyes</div>
+              <div class="measurement measurement-2">Width of the nose</div>
+              <div class="measurement measurement-3">Depth of the eye sockets</div>
+              <div class="measurement measurement-4">The shape of the cheekbones</div>
+              <div class="measurement measurement-5">The length of the jaw line</div>
+            </div>
+          </div>
+          <div class="frame-item frame-item-4 ">
+            <div class="text-1">Colour image</div>
+            <div class="text-2">Infrared image</div>
+            <div class="image-1"></div>
+          </div>
+          <div class="frame-item frame-item-5 "> 
+            <div class="crowd"></div>
+            <div class="stages">
+              <div class="stage stage-1 active"><div class="face-mark"></div></div>
+              <div class="stage stage-2"><div class="face-screen-1"></div></div>
+              <div class="stage stage-3"><div class="face-screen-2"></div></div>
+              <div class="stage stage-4"><div class="face-id-1"></div><div class="face-id-2"></div></div>
+              <div class="stage stage-5"><div class="face-database"></div></div>
+            </div>
+          </div>
+          <div class="frame-item frame-item-6 ">
+            <div class="cases">
+              <div class="case case-1"><span>Images of Steven Talley</span><div class="case-image"></div></div>
+              <div class="case case-2"><span>Bank lobby camera images</span><div class="case-image"></div></div>
+              
+            </div>
+          </div>
+        </div>
+        <div id="frames" class="frames swiper-container">
+          <div class="frames-container swiper-wrapper">
+            <section id="frame-0" class="frame swiper-slide">
+              <div class="title"><p>Your face is becoming the key to accessing your money, your devices and could mean the difference between freedom and imprisonment. It's a feature that unlike fingerprints can be scanned at a distance, and it's being used on a massive scale to electronically identify people as they walk past a camera. Here’s how it works, and how it fails. </p></div>
+            </section>
+            <section id="frame-1" class="frame swiper-slide">
+              <div class="title"><p>Facial recognition systems generate what is called a faceprint — a unique code applicable to one individual — by measuring the distance between points like the width of a person's nose. <br><span class="remark">Tap or click a feature to see what the system measures.</span></p></div>
+              <div class="selectors">
+                <div id="selector-1" class="selector selector-1" data-select="1" ><span class="ion"></span></div>
+                <div id="selector-2" class="selector selector-2" data-select="2" ><span class="ion"></span></div>
+                <div id="selector-3" class="selector selector-3" data-select="3" ><span class="ion"></span></div>
+                <div id="selector-4" class="selector selector-4" data-select="4" ><span class="ion"></span></div>
+                <div id="selector-5" class="selector selector-5" data-select="5" ><span class="ion"></span></div>
+              </div>
+              <a class="source" href="https://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition1.htm" target="_blank">Source</a>
+            </section>
+            <section id="frame-2" class="frame swiper-slide">
+              <div class="title"><p>These so-called "nodal points" — there are more than 80 points that a facial recognition system checks — are combined mathematically to build the faceprint, which can then be used to search through an identity database. </p></div>
+              <a class="source" href="https://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition1.htm" target="_blank">Source</a>
+            </section>
+            <section id="frame-3" class="frame swiper-slide">
+              <div class="title"><p>The systems used on some personal devices work a little differently. The iPhone X shines a grid of 30,000 infrared dots on a face and makes a crude 3D model. This method works from a metre away. </p></div>
+              <a class="source" href="https://images.apple.com/business/docs/FaceID_Security_Guide.pdf https://support.apple.com/en-us/HT208108 " target="_blank">Source</a>
+            </section>
+            <section id="frame-4" class="frame swiper-slide">
+              <div class="title"><p>The Microsoft Hello system takes an infrared picture of a face to allow for traditional facial recognition at a 1m distance. Neither system stores face images, just the resulting faceprint code.</p></div>
+              <a class="source" href="https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello-face-authentication " target="_blank">Source</a>
+            </section>
+            <section id="frame-5" class="frame swiper-slide">
+              <div class="title"><p>A security camera image can be used to recognise faces from far away. They use a more complex system that looks for faces, re-orients, skews and stretches them. These are then converted to a black-and-white image to make facial features easier for the computer to recognise. <br><span class="remark">Select a facial recognition stage on the left to see it work. </span></p></div>
+              <div class="left-panel">
+                <div class="stage-text stage-text-1 " ><span class="text active" data-select="1" >Isolate face from crowd </span><span class="ion ion-android-arrow-dropdown" ></span></div>
+                <div class="stage-text stage-text-2" ><span class="text" data-select="2" >Locate features </span><span class="ion ion-android-arrow-dropdown" ></span></div>
+                <div class="stage-text stage-text-3" ><span class="text" data-select="3" >Align features </span><span class="ion ion-android-arrow-dropdown" ></span></div>
+                <div class="stage-text stage-text-4" ><span class="text" data-select="4" >Measure features, build faceprint </span><span class="ion ion-android-arrow-dropdown" ></span></div>
+                <div class="stage-text stage-text-5" ><span class="text" data-select="5" >Match faceprint in database </span></div>
+              </div>
+              <a class="source" href="https://cours.etsmtl.ca/sys828/REFS/Intro/Hanbook%20of%20Face%20Recognition.pdf#page=20 " target="_blank">Source</a>
+            </section>
+            <section id="frame-6" class="frame swiper-slide">
+              <div class="title">
+                <p>Facial recognition error rates can be as low as 0.8 per cent, but in practice that would mean eight in 1000 scans could misidentify a murder suspect. A case reported in <em>The Intercept</em> showed how security footage of a bank robber was matched by facial recognition to a man named Steven Talley, who could prove he was not at the bank at the time of the robbery.</p>
+              </div>
+              <a class="source" href="https://theintercept.com/2016/10/13/how-a-facial-recognition-mismatch-can-ruin-your-life/" target="_blank">Source</a>
+            </section>
+          </div>
+        </div>
+      </article>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://multimedia.scmp.com/widgets/js/utils/utils.v3.min.js"></script>
+    
+	<script>
+	var config = {
+  name: "Facial recognition | SCMP", name_long: "Facial recognition is appearing in more places, from unlocking devices to building giant social monitoring systems. Hereâ€™s how it works. | SCMP",
+  url_path: window.location.href.substr(0, window.location.href.lastIndexOf("/") + 1), index: "index.html",
+  frames: [],
+  data: null, date: {}, swipers: {}, loader: { queue: 0, loaded: 0 },
+  delays: { scroll: 300 }, current: { frame: 0 }
+};
+
+$(document).ready(function() {
+  initTracking();
+  parseParams();
+  checkBrowser();
+  initUI();
+  loadMap();
+});
+
+function initTracking() {
+  SCMPUtils.ga.pageview_multimedia("10 Nov 2017", "Castiel Ho, Hoi Wong", "News, World");
+}
+
+function parseParams() {
+  var params = SCMPUtils.params();
+  if (_.isString(params.share) && params.share === "true")
+    $("body").addClass("share-page");
+}
+
+function checkBrowser() {
+  if (SCMPUtils.mobile.any())
+    $("body").addClass("scmp-m");
+  else
+    $("body").addClass("scmp-d");
+
+  if (SCMPUtils.mobile.android())
+    $("body").addClass("scmp-m-android");
+  else if (SCMPUtils.mobile.ios())
+    $("body").addClass("scmp-m-ios");
+  else if (SCMPUtils.browser.safari())
+    $("body").addClass("scmp-d-safari");
+  else if (SCMPUtils.browser.chrome())
+    $("body").addClass("scmp-d-chrome");
+  else if (SCMPUtils.browser.firefox())
+    $("body").addClass("scmp-d-firefox");
+  else if (SCMPUtils.browser.opera())
+    $("body").addClass("scmp-d-opera");
+  else if (SCMPUtils.browser.ie())
+    $("body").addClass("scmp-d-ie");
+}
+
+function initUI() {
+  initFrame();
+  initShare();
+  $(".selector").hover(function(){
+    var select = parseInt($(this).attr("data-select"))
+    reset();
+    $(this).addClass("inactive");
+    $("#svg").addClass("measure-" + select);
+    $(".measurements .measurement-" + select ).addClass("active");
+  });
+  $(".stage-text .text").click(function(){
+    var select = parseInt($(this).attr("data-select"))
+    $(".stage-text .text").removeClass("active");
+    $(this).addClass("active");
+    $(".stages .stage").removeClass("active");
+    $(".stages .stage-" + select ).addClass("active");
+  });
+}
+
+function reset() { 
+    $(".selectors .selector").removeClass("inactive");
+    $("#svg").removeClass("measure-1 measure-2 measure-3 measure-4 measure-5");
+    $(".measurements .measurement").removeClass("active");
+    $(".stage-text .text, .stage").removeClass("active");
+    $(".stage-text-1 .text, .stage-1").addClass("active");
+};
+
+function initShare() {
+  $("#share-topic").click(function() {
+    var link = $(this).attr("href");
+    if (_.isString(link) && !_.isEmpty(link))
+      SCMPUtils.ga.external("scmp_multimedia", "topic page link - " + link);
+  });
+  $("#top .facebook-button, #share-facebook").click(function() {
+    SCMPUtils.ga.share_fb("scmp_multimedia", config.url_path + config.index + "?share=true&r=fb");
+    SCMPUtils.share.facebook(config.url_path + config.index + "?share=true&r=fb");
+  });
+  $("#top .twitter-button, #share-twitter").click(function() {
+    SCMPUtils.ga.share_twitter("scmp_multimedia", config.url_path + config.index + "?share=true&r=twitter");
+    SCMPUtils.share.twitter(config.url_path + config.index + "?share=true&r=twitter", config.name_long);
+  });
+  $("#share-whatsapp")
+    .attr("href", "whatsapp://send?text=" + config.name + " " + config.url_path + config.index + "?share=true&r=whatsapp")
+    .click(function() { SCMPUtils.ga.share_whatsapp("scmp_multimedia", config.url_path + config.index + "?share=true&r=whatsapp"); });
+  $("#share-facebook-page").click(function() {
+    SCMPUtils.ga.external("scmp_multimedia", "scmp facebook page link");
+  });
+}
+
+function initFrame() {
+  config.swipers.frames = new Swiper("#frames", {
+    direction: "vertical",
+    speed: config.delays.scroll,
+    initialSlide: 0,
+    centeredSlides: false,
+    slidesPerView: "auto",
+    slidesPerGroup: 1,
+    longSwipersRatio: .35,
+    simulateTouch: false,
+    effect: "slide",
+    resistance: false,
+    navigation: { nextEl: "#control-next", prevEl: "#control-prev", disabledClass: "control-inactive" },
+    pagination: { clickable: false },
+    mousewheel: true,
+    keyboard: false,
+    loop: false,
+    observer: true,
+    on: { slidePrevTransitionStart: prevFrame, slideNextTransitionStart: nextFrame, slideChangeTransitionEnd: stopFrame }
+  });
+  $("#control-reload").click(function() {
+    SCMPUtils.ga.click("scmp_multimedia", "facial recognition", "reload test timeline");
+  });
+}
+
+function prevFrame() {
+  if (_.isObject(config.swipers.frames) && _.isObject(config.swipers.frames.slides) && !_.isEmpty(config.swipers.frames.slides)
+    && _.isFinite(config.swipers.frames.activeIndex) && config.swipers.frames.activeIndex >= 0 && config.swipers.frames.activeIndex < config.swipers.frames.slides.length) {
+    SCMPUtils.ga.click("scmp_multimedia", "facial recognition", "prev frame - " + config.swipers.frames.activeIndex);
+    config.current.round++;
+    setFrame(config.swipers.frames.activeIndex);
+  }
+}
+
+function nextFrame() {
+  if (_.isObject(config.swipers.frames) && _.isObject(config.swipers.frames.slides) && !_.isEmpty(config.swipers.frames.slides)
+    && _.isFinite(config.swipers.frames.activeIndex) && config.swipers.frames.activeIndex >= 0 && config.swipers.frames.activeIndex < config.swipers.frames.slides.length) {
+    SCMPUtils.ga.click("scmp_multimedia", "facial recognition", "next frame - " + config.swipers.frames.activeIndex);
+    config.current.round++;
+    $("#control-next").removeClass("control-blink");
+    setFrame(config.swipers.frames.activeIndex);
+  }
+}
+
+function resetFrame() {
+  $("#header").removeClass("header-box header-range");
+  $("#control-reload").addClass("control-inactive");
+  $(".frame-item").removeClass("active");
+  $("#container").removeClass("frame-0 frame-1 frame-2 frame-3 frame-4 frame-5 frame-6 frame-7 ");
+  reset();
+}
+
+function stopFrame() {
+}
+
+function setFrame(index) {
+  if (_.isObject(config.swipers.frames) && _.isFinite(index) && index >= 0 && index < config.swipers.frames.slides.length) {
+    resetFrame();
+    $("#container").addClass("frame-" + index);
+    $(".frame-item-" + index).addClass("active");
+  }
+}
+
+function loadMap() {
+  config.loader.queue++;
+  $("#svg-1").load("face-01.svg", checkLoading);
+  $("#svg-2").load("face-02.svg", checkLoading);
+
+}
+
+function checkLoading() {
+  config.loader.loaded++;
+  if (config.loader.queue === config.loader.loaded) {
+    setTimeout(function() {
+      $("#control-next").addClass("control-blink");
+      setFrame(0);
+      hideLoading();
+    }, 1000);
+  }
+}
+
+function hideLoading() {
+  $("#loader-area").addClass("hidden");
+}
+
+function timeout(callback, delay, round) {
+  if (callback && _.isFunction(callback)
+    && _.isFinite(delay) && delay >= 0
+    && _.isFinite(round) && round >= 0) {
+    if (delay > 0) {
+      (function(callback, round) {
+        setTimeout(function() {
+          if (round === config.current.round)
+            callback();
+        }, delay);
+      }) (callback, round);
+    } else if (delay === 0 && round === config.current.round)
+      callback();
+  }
+}
+	</script>
+  </body>
+</html>
